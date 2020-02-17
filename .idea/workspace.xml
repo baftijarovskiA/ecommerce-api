@@ -47,6 +47,11 @@
     </execution>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Albin Baftijarovski &lt;baftijarovski.a@outlook.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
@@ -202,6 +207,10 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="690" y="310" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1581865805292" />
+    <state x="585" y="149" key="CommitChangelistDialog2" timestamp="1581981152655">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="585" y="149" key="CommitChangelistDialog2/0.30.1920.1050/1920.30.1920.1050@0.30.1920.1050" timestamp="1581981152655" />
     <state x="740" y="310" key="FileChooserDialogImpl" timestamp="1581959955775">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
@@ -210,6 +219,10 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="730" y="369" key="NewPhpClassDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1581865377651" />
+    <state x="552" y="288" key="Vcs.Push.Dialog.v2" timestamp="1581981091373">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="552" y="288" key="Vcs.Push.Dialog.v2/0.30.1920.1050/1920.30.1920.1050@0.30.1920.1050" timestamp="1581981091373" />
     <state x="616" y="258" key="run.anything.popup" timestamp="1581879848850">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
