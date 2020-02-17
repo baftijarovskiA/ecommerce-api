@@ -23,8 +23,9 @@ use Illuminate\Http\Request;
 |--------------------------------------------------------------------------
  */
 
-Route::post('register', 'AccountController@register');
-Route::post('login', 'AccountController@authenticate');
+Route::post('register', 'AccountController@register'); // register
+Route::post('login', 'AccountController@authenticate'); // login
+Route::post('recover', 'AccountController@recover'); // send email for password reset
 
 /*
 |--------------------------------------------------------------------------

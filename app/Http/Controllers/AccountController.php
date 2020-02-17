@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Role;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Validator;
 use Tymon\JWTAuth\Exceptions\JWTException;
 use Tymon\JWTAuth\Facades\JWTAuth;
@@ -23,7 +25,6 @@ class AccountController extends Controller
     public function authenticate(Request $request)
     {
         $credentials = $request->only('email', 'password');
-
         try {
             if (! $token = JWTAuth::attempt($credentials)) {
                 return response()->json(['error' => 'invalid_credentials'], 400);
@@ -32,7 +33,7 @@ class AccountController extends Controller
             return response()->json(['error' => 'could_not_create_token'], 500);
         }
 
-        return response()->json(compact('token'));
+        return response()->json(compact('token'),200)->header("Status Code","200");
     }
 
     public function register(Request $request)
@@ -53,6 +54,9 @@ class AccountController extends Controller
             'password' => Hash::make($request->get('password')),
         ]);
 
+        $role = Role::where('name', '=', 'user')->first();
+        $user->roles()->attach($role->id);
+
         $token = JWTAuth::fromUser($user);
 
         $email = $user->email;
@@ -65,7 +69,6 @@ class AccountController extends Controller
         $subject = "Please verify your email address.";
         Mail::send('email.verify', ['name' => $name, 'verification_code' => $verification_code],
             function($mail) use ($email, $name, $subject){
-//                $mail->from(getenv('FROM_EMAIL_ADDRESS'), "eCommerce");
                 $mail->to($email, $name);
                 $mail->subject($subject);
             });
@@ -127,7 +130,6 @@ class AccountController extends Controller
     public function getAuthenticatedUser()
     {
         try {
-
             if (! $user = JWTAuth::parseToken()->authenticate()) {
                 return response()->json(['user_not_found'], 404);
             }
@@ -147,7 +149,10 @@ class AccountController extends Controller
         } catch (JWTException $e) {
         }
 
-        return response()->json(compact('user'));
+        $roles = User::find($user->id)->roles()->get();
+        $user['role'] = $roles;
+
+        return response()->json(compact('user'),200);
     }
 
     public function logout(Request $request) {
