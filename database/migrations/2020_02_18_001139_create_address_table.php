@@ -23,10 +23,10 @@ class CreateAddressTable extends Migration
             $table->string('second_address')->nullable();
             $table->string('city');
             $table->string('country');
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('set null');
         });
     }
 

@@ -33,7 +33,10 @@ class AccountController extends Controller
             return response()->json(['error' => 'could_not_create_token'], 500);
         }
 
-        return response()->json(compact('token'),200)->header("Status Code","200");
+        $user = auth()->user();
+        $roles = User::find($user->id)->roles()->get();
+        $user['role'] = $roles;
+        return response()->json(compact('user','token'),200);
     }
 
     public function register(Request $request)
@@ -73,7 +76,7 @@ class AccountController extends Controller
                 $mail->subject($subject);
             });
 
-        return response()->json(compact('user','token'),201);
+        return response()->json(compact('user','token'),200);
     }
 
     public function verifyUser($verification_code)

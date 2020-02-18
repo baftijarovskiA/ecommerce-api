@@ -39,7 +39,11 @@ class AddressController extends Controller
         $address->second_address = $request->input('second_address');
         $address->city = $request->input('city');
         $address->country = $request->input('country');
-        $address->user_id = auth()->user()->id;
+        if (auth()->user()){
+            $address->user_id = auth()->user()->id;
+        } else {
+            $address->user_id = null;
+        }
         $address->save();
 
         return response()->json(['success'=>$address],200);

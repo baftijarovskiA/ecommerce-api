@@ -29,7 +29,7 @@ Route::post('recover', 'AccountController@recover'); // send email for password 
 
 Route::get('posts','PostsController@index'); // get all posts
 Route::get('posts/{slug}','PostsController@findPost'); // get post form slug
-
+Route::post('address','AddressController@store'); // create address
 
 /*
 |--------------------------------------------------------------------------
@@ -88,6 +88,8 @@ Route::group(['middleware' => ['jwt.verify:true,manager,half-access']], function
 Route::group(['middleware' => ['jwt.verify:true,employee,employee-access']], function() {
 
     Route::post('posts','PostsController@store'); // create a post
+    Route::post('posts/edit/{id}','PostsController@update'); // edit a post
+    Route::get('posts/id/{id}','PostsController@getPost'); // get a post by id
 
 });
 
@@ -99,7 +101,7 @@ Route::group(['middleware' => ['jwt.verify:true,employee,employee-access']], fun
 
 Route::group(['middleware' => ['jwt.verify:true,user,user-access']], function() {
 
-    Route::post('address','AddressController@store'); // create address
+
 
 });
 
