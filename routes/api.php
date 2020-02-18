@@ -27,6 +27,10 @@ Route::post('register', 'AccountController@register'); // register
 Route::post('login', 'AccountController@authenticate'); // login
 Route::post('recover', 'AccountController@recover'); // send email for password reset
 
+Route::get('posts','PostsController@index'); // get all posts
+Route::get('posts/{slug}','PostsController@findPost'); // get post form slug
+
+
 /*
 |--------------------------------------------------------------------------
 | Authenticated User API Routes
@@ -70,7 +74,8 @@ Route::group(['middleware' => ['jwt.verify:true,admin,full-access']], function()
 
 Route::group(['middleware' => ['jwt.verify:true,manager,half-access']], function() {
 
-
+    Route::post('posts/{id}','PostsController@delete'); // delete a post
+    Route::get('address','AddressController@index'); // get all addresses
 
 });
 
@@ -82,7 +87,7 @@ Route::group(['middleware' => ['jwt.verify:true,manager,half-access']], function
 
 Route::group(['middleware' => ['jwt.verify:true,employee,employee-access']], function() {
 
-
+    Route::post('posts','PostsController@store'); // create a post
 
 });
 
@@ -94,7 +99,7 @@ Route::group(['middleware' => ['jwt.verify:true,employee,employee-access']], fun
 
 Route::group(['middleware' => ['jwt.verify:true,user,user-access']], function() {
 
-
+    Route::post('address','AddressController@store'); // create address
 
 });
 

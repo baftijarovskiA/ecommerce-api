@@ -2,38 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fda7fe59-f3b8-4d5e-844a-a579f0dd5241" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ecommerce.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ecommerce.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Address.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/AddressController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_02_17_231505_create_posts_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_02_17_233423_cover_image_to_post.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_02_18_001139_create_address_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/PostSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/UserSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AccountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AccountController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +146,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lsapp" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -192,8 +172,16 @@
       <workItem from="1581959915121" duration="43000" />
       <workItem from="1581964966544" duration="3601000" />
       <workItem from="1581969352900" duration="5169000" />
-      <workItem from="1581977744574" duration="3276000" />
+      <workItem from="1581977744574" duration="8696000" />
     </task>
+    <task id="LOCAL-00001" summary="auth fixes">
+      <created>1581981080407</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1581981080407</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,19 +189,23 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="auth fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="auth fixes" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="310" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1581865805292">
+    <state x="690" y="310" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1581985539078">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
+    <state x="690" y="310" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.30.1920.1050/1920.30.1920.1050@0.30.1920.1050" timestamp="1581985539078" />
     <state x="690" y="310" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1581865805292" />
     <state x="585" y="149" key="CommitChangelistDialog2" timestamp="1581981152655">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="585" y="149" key="CommitChangelistDialog2/0.30.1920.1050/1920.30.1920.1050@0.30.1920.1050" timestamp="1581981152655" />
-    <state x="740" y="310" key="FileChooserDialogImpl" timestamp="1581959955775">
+    <state x="740" y="310" key="FileChooserDialogImpl" timestamp="1581982154537">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
+    <state x="740" y="310" key="FileChooserDialogImpl/0.30.1920.1050/1920.30.1920.1050@0.30.1920.1050" timestamp="1581982154537" />
     <state x="740" y="310" key="FileChooserDialogImpl/0.30.1920.1050@0.30.1920.1050" timestamp="1581959955775" />
     <state x="730" y="369" key="NewPhpClassDialog" timestamp="1581865377651">
       <screen x="0" y="30" width="1920" height="1050" />
