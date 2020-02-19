@@ -72,8 +72,8 @@ class PostsController extends Controller
 
     public function update(Request $request, $id){
         $validator = Validator::make($request->all(), [
-            'title' => 'required|string|max:255',
-            'content' => 'required',
+            'title' => 'string|max:255',
+            'content' => '',
             'cover_image' => 'image|nullable|max:1999'
         ]);
 
