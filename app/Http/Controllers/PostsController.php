@@ -13,7 +13,7 @@ class PostsController extends Controller
 {
     //
     public function index(){
-        $posts = Post::all()->where('deleted', '=', '0');
+        $posts = Post::orderBy('updated_at','desc')->where('deleted', '=', '0')->get();
         return response()->json($posts,200);
     }
 
@@ -112,7 +112,7 @@ class PostsController extends Controller
     }
 
     public function delete($id){
-        $post = Post::find($id)->first();
+        $post = Post::find($id);
         $post->deleted = 1;
         $post->save();
         return response()->json(['success'=>$post],200);

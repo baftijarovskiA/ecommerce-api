@@ -74,7 +74,7 @@ Route::group(['middleware' => ['jwt.verify:true,admin,full-access']], function()
 
 Route::group(['middleware' => ['jwt.verify:true,manager,half-access']], function() {
 
-    Route::post('posts/{id}','PostsController@delete'); // delete a post
+    Route::put('posts/{id}','PostsController@delete'); // delete a post
     Route::get('address','AddressController@index'); // get all addresses
 
 });
@@ -88,7 +88,7 @@ Route::group(['middleware' => ['jwt.verify:true,manager,half-access']], function
 Route::group(['middleware' => ['jwt.verify:true,employee,employee-access']], function() {
 
     Route::post('posts','PostsController@store'); // create a post
-    Route::post('posts/edit/{id}','PostsController@update'); // edit a post
+    Route::put('posts/edit/{id}','PostsController@update'); // edit a post
     Route::get('posts/id/{id}','PostsController@getPost'); // get a post by id
 
 });
