@@ -31,6 +31,9 @@ Route::get('posts','PostsController@index'); // get all posts
 Route::get('posts/{slug}','PostsController@findPost'); // get post form slug
 Route::post('address','AddressController@store'); // create address
 
+Route::get('category','CategoryController@getAll'); //get all categories
+
+
 /*
 |--------------------------------------------------------------------------
 | Authenticated User API Routes
@@ -76,6 +79,9 @@ Route::group(['middleware' => ['jwt.verify:true,manager,half-access']], function
 
     Route::put('posts/{id}','PostsController@delete'); // delete a post
     Route::get('address','AddressController@index'); // get all addresses
+    Route::post('category','CategoryController@create'); //create new category
+    Route::put('category/edit/{id}','CategoryController@update'); //edit category by id
+    Route::delete('category/delete/{id}','CategoryController@hide'); //delete category by id
 
 });
 
