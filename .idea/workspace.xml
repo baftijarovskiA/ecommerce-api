@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fda7fe59-f3b8-4d5e-844a-a579f0dd5241" name="Default Changelist" comment="auth fixes">
-      <change afterPath="$PROJECT_DIR$/app/Order.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_02_21_201306_create_orders_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/CategorySeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/ProductSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/RolePermSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/PostSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/PostSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +175,7 @@
       <workItem from="1582136276517" duration="2195000" />
       <workItem from="1582149107163" duration="1982000" />
       <workItem from="1582218792438" duration="15580000" />
-      <workItem from="1582290281228" duration="8424000" />
+      <workItem from="1582290281228" duration="9301000" />
     </task>
     <task id="LOCAL-00001" summary="auth fixes">
       <created>1581981080407</created>
@@ -209,10 +211,10 @@
     </state>
     <state x="740" y="310" key="FileChooserDialogImpl/0.30.1920.1050/1920.30.1920.1050@0.30.1920.1050" timestamp="1581982154537" />
     <state x="740" y="310" key="FileChooserDialogImpl/0.30.1920.1050@0.30.1920.1050" timestamp="1582239398869" />
-    <state x="730" y="369" key="NewPhpClassDialog" timestamp="1581865377651">
+    <state x="730" y="369" key="NewPhpClassDialog" timestamp="1582323825160">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="730" y="369" key="NewPhpClassDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1581865377651" />
+    <state x="730" y="369" key="NewPhpClassDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1582323825160" />
     <state x="552" y="288" key="Vcs.Push.Dialog.v2" timestamp="1581981091373">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
