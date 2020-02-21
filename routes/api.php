@@ -33,6 +33,10 @@ Route::post('address','AddressController@store'); // create address
 
 Route::get('category','CategoryController@getAll'); //get all categories
 
+Route::get('product','ProductController@get'); // get available products
+Route::get('product/slug/{id}','ProductController@find'); // find product by slug
+Route::get('product/category/{id}','ProductController@getByCategory'); // get products by category id
+
 
 /*
 |--------------------------------------------------------------------------
@@ -82,6 +86,8 @@ Route::group(['middleware' => ['jwt.verify:true,manager,half-access']], function
     Route::post('category','CategoryController@create'); //create new category
     Route::put('category/edit/{id}','CategoryController@update'); //edit category by id
     Route::delete('category/delete/{id}','CategoryController@hide'); //delete category by id
+    Route::get('category/{id}','CategoryController@find'); // find category by id
+    Route::post('product','ProductController@store'); // create new product
 
 });
 
@@ -96,6 +102,9 @@ Route::group(['middleware' => ['jwt.verify:true,employee,employee-access']], fun
     Route::post('posts','PostsController@store'); // create a post
     Route::put('posts/edit/{id}','PostsController@update'); // edit a post
     Route::get('posts/id/{id}','PostsController@getPost'); // get a post by id
+    Route::get('product/all','ProductController@getAll'); // get all products
+    Route::put('product/edit/{id}','ProductController@update'); // edit product by id
+    Route::get('product/id/{id}','ProductController@findById'); // find product by id
 
 });
 

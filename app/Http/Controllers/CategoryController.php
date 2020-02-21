@@ -10,7 +10,15 @@ class CategoryController extends Controller
 {
     public function getAll(){
         $categories = Category::where('available', '=', 1)->get();
-        return response()->json($categories,200);
+        return response()->json(['response'=>$categories],200);
+    }
+
+    public function find($id){
+        $category = Category::find($id);
+        if ($category == null){
+            return response()->json(['response'=>'Category not found'],400);
+        }
+        return response()->json(['response'=>$category],200);
     }
 
     public function create(Request $request){
@@ -28,7 +36,7 @@ class CategoryController extends Controller
         $category->slug = $this->slugMaker($request->input('name'));
         $category->save();
 
-        return response()->json(['response'=>$category], 200);
+        return response()->json(['response'=>'Category created'], 200);
     }
 
     public function update(Request $request, $id){
@@ -46,7 +54,7 @@ class CategoryController extends Controller
         $category->slug = $this->slugMaker($request->input('name'));
         $category->save();
 
-        return response()->json(['response'=>$category], 200);
+        return response()->json(['response'=>'Category updated'], 200);
     }
 
     public function hide($id){
